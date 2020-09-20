@@ -1,5 +1,4 @@
 FROM openjdk:8
-EXPOSE 8081
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080
+ADD target/java-project-1.0-SNAPSHOT.jar java-project-1.0-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/java-project-1.0-SNAPSHOT.jar"]
